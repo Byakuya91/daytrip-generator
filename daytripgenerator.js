@@ -3,7 +3,7 @@
 //console.log("Hello World");
 
 //  Step one:  Create test arrays 
-// insantiate and intialize test arrays
+
 
 let usCites = ["Savanah", "New York", "New Orleans", "Mephis"];
 
@@ -23,20 +23,22 @@ let entertainmentOptions = ["TV", "Movie", "Books", "Video Games"];
 // console.log(transportationOptions);
 
 
-// Step two: create a random function
+// // Step two: create a random function
 
-function getRandomSelection(maxArray) {
-    let arrayIndex = Math.floor(Math.random() * maxArray.length);
+function getRandomSelection(nameArray) {
+    let arrayIndex = Math.floor(Math.random() * nameArray.length);
 
-    return maxArray[arrayIndex];
+    return nameArray[arrayIndex];
 
 }
 
 //  test function with nums
 
-// let result = getRandomNumber(10);
+//let result = getRandomSelection(10);
 
-// console.log(result);
+
+
+
 
 
 // Step three: test random function with test arrays
@@ -66,6 +68,7 @@ function reselectOption(selectedOption, ArrayOptions) {
 
     let notSatisfied = true;
     while (notSatisfied) {
+        console.log("Your choice is " + selectedOption)
         let useroption = prompt(" Are you satisfied with your choice(y/n)?")
 
         if (useroption === 'y') {
@@ -79,17 +82,17 @@ function reselectOption(selectedOption, ArrayOptions) {
 
         if (useroption2 === 'y') {
             let newOption = getRandomSelection(ArrayOptions);
-            console.log("You're new Selected option is " + newOption);
+            console.log("You're new selected option is " + newOption);
             // notSatisfied = false;
             break;
-            console.log("after break")
+            // console.log("after break")
 
 
-        }
+        }   // displaying new option and ending the loop
         else {
-            console.log(" You're selected option is  " + selectedOption);
+            console.log(" You're intial  option is still  " + selectedOption);
             notSatisfied = false;
-            break;
+            //break;
         }
 
     }
@@ -98,19 +101,29 @@ function reselectOption(selectedOption, ArrayOptions) {
 }
 
 
-// test the function 
+// // test the reselectOption function
 reselectOption(selectedRestaurant, chainRestaurants);
 
+reselectOption(selectedEntertainment, entertainmentOptions);
 
-// Step five: function to confirm is daytrip is complete. 
+reselectOption(selectedTransportation, transportationOptions);
 
-function completedDayTrip() {
+reselectOption(selectedCity, usCites);
 
 
-    if () {
 
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
